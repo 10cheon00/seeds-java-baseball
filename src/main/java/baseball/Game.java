@@ -8,7 +8,9 @@ public class Game {
     }
 
     public void run() {
-        this.state.handle();
+        while (!this.isEnd()) {
+            this.state.handle();
+        }
     }
 
     public void changeState(GameState state) {
